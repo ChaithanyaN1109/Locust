@@ -1,8 +1,14 @@
 pipeline
 {
     agent any
-
+    
     stages {
+        stage('pre-installation')
+        {   steps
+         {
+            pip3 install locust
+        }
+        }
         stage('checkout')
         {
             steps{
@@ -13,7 +19,7 @@ pipeline
         {
             steps{
                 git 'https://github.com/ChaithanyaN1109/Locust.git' 
-                bat 'locust.exe -u 1 -r 1 -t 50s --headless --print-stats --csv run.csv --csv-full-history --host=https://jsonplaceholder.typicode.com'
+                bat 'locust -u 1 -r 1 -t 50s --headless --print-stats --csv run.csv --csv-full-history --host=https://jsonplaceholder.typicode.com'
             }
         }     
         
