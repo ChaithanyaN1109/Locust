@@ -19,7 +19,9 @@ pipeline
          stage('git push')
       {
         steps{
+            warnError('Tests failed!') {
           git push origin
+            }
           
         }
          
