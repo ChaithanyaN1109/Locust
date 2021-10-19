@@ -15,19 +15,7 @@ pipeline
                 git 'https://github.com/ChaithanyaN1109/Locust.git' 
                 bat 'locust.exe -u 1 -r 1 -t 50s --headless --print-stats --csv run.csv --csv-full-history --host=https://jsonplaceholder.typicode.com'
             }
-        }
-         stage('git push')
-      {
-        steps{
-            warnError('Tests failed!') {
-          git push origin
-            }
-          
-        }
-         
-          
-      }
-       
+        }     
         
     }
 }
