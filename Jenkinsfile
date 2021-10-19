@@ -22,12 +22,7 @@ pipeline
           git add '\\workspace\run.csv_stats' 
           
         }
-          steps{
-               git commit -m"Adding csv reports"
-          }
-           steps{
-              git push 'https://github.com/ChaithanyaN1109/Locust.git'
-          }
+         
           
       }
        
