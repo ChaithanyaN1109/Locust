@@ -6,7 +6,7 @@ pipeline
         stage('pre-installation')
         {   steps
          {
-            pip3 install locust
+            bat ' pip3 install locust'
         }
         }
         stage('checkout')
