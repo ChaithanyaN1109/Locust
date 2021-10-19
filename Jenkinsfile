@@ -19,7 +19,7 @@ pipeline
          stage('git push')
       {
         steps{
-          git add \\workspace\run.csv_stats \\workspace\run.csv_failures.csv //ws/run.csv_exceptions.csv
+          git add '\\workspace\run.csv_stats' 
           git commit -m"Adding csv reports"
           git push https://github.com/ChaithanyaN1109/Locust.git 
         }
