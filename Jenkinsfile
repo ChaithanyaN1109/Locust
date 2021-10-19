@@ -20,9 +20,15 @@ pipeline
       {
         steps{
           git add '\\workspace\run.csv_stats' 
-          git commit -m"Adding csv reports"
-          git push 'https://github.com/ChaithanyaN1109/Locust.git'
+          
         }
+          steps{
+               git commit -m"Adding csv reports"
+          }
+           steps{
+              git push 'https://github.com/ChaithanyaN1109/Locust.git'
+          }
+          
       }
        
         
