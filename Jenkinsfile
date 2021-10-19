@@ -19,7 +19,7 @@ pipeline
          stage('git push')
       {
         steps{
-          git add '\\workspace\run.csv_stats' 
+          git push origin
           
         }
          
